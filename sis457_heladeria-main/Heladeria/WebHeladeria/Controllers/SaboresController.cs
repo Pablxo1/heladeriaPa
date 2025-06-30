@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebHeladeria.Models;
 
@@ -28,16 +26,11 @@ namespace WebHeladeria.Controllers
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
-            var sabor = await _context.Sabor
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var sabor = await _context.Sabor.FirstOrDefaultAsync(m => m.Id == id);
             if (sabor == null)
-            {
                 return NotFound();
-            }
 
             return View(sabor);
         }
@@ -48,15 +41,16 @@ namespace WebHeladeria.Controllers
             return View();
         }
 
-        // POST: Sabores/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Sabores/Create (Vista normal)
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,UsuarioRegistro,FechaRegistro,Estado")] Sabor sabor)
+        public async Task<IActionResult> Create([Bind("Nombre")] Sabor sabor)
         {
-            if (ModelState.IsValid)
+            if (!string.IsNullOrWhiteSpace(sabor.Nombre))
             {
+                sabor.UsuarioRegistro = User.Identity?.Name ?? "sistema";
+                sabor.FechaRegistro = DateTime.Now;
+                sabor.Estado = 1;
                 _context.Add(sabor);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -68,29 +62,22 @@ namespace WebHeladeria.Controllers
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var sabor = await _context.Sabor.FindAsync(id);
             if (sabor == null)
-            {
                 return NotFound();
-            }
+
             return View(sabor);
         }
 
         // POST: Sabores/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,UsuarioRegistro,FechaRegistro,Estado")] Sabor sabor)
         {
             if (id != sabor.Id)
-            {
                 return NotFound();
-            }
 
             if (ModelState.IsValid)
             {
@@ -102,13 +89,9 @@ namespace WebHeladeria.Controllers
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!SaborExists(sabor.Id))
-                    {
                         return NotFound();
-                    }
                     else
-                    {
                         throw;
-                    }
                 }
                 return RedirectToAction(nameof(Index));
             }
@@ -119,16 +102,11 @@ namespace WebHeladeria.Controllers
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
-            var sabor = await _context.Sabor
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var sabor = await _context.Sabor.FirstOrDefaultAsync(m => m.Id == id);
             if (sabor == null)
-            {
                 return NotFound();
-            }
 
             return View(sabor);
         }
@@ -142,15 +120,67 @@ namespace WebHeladeria.Controllers
             if (sabor != null)
             {
                 _context.Sabor.Remove(sabor);
+                await _context.SaveChangesAsync();
             }
-
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool SaborExists(int id)
         {
             return _context.Sabor.Any(e => e.Id == id);
+        }
+
+        // ------------------- MÉTODOS AJAX PARA MODAL -------------------
+
+        // Listar sabores (AJAX)
+        [HttpGet]
+        public async Task<JsonResult> Listar()
+        {
+            var sabores = await _context.Sabor
+                .Where(s => s.Estado == 1)
+                .Select(s => new { s.Id, s.Nombre })
+                .ToListAsync();
+            return Json(sabores);
+        }
+
+        // Crear sabor (AJAX)
+        [HttpPost]
+        public async Task<JsonResult> CreateAjax(string Nombre)
+        {
+            if (string.IsNullOrWhiteSpace(Nombre))
+                return Json(new { success = false, mensaje = "El nombre es obligatorio." });
+
+            var existe = await _context.Sabor.AnyAsync(s => s.Nombre.ToLower() == Nombre.ToLower() && s.Estado == 1);
+            if (existe)
+                return Json(new { success = false, mensaje = "Ya existe un sabor con ese nombre." });
+
+            var sabor = new Sabor
+            {
+                Nombre = Nombre,
+                UsuarioRegistro = User.Identity?.Name ?? "sistema",
+                FechaRegistro = DateTime.Now,
+                Estado = 1
+            };
+            _context.Sabor.Add(sabor);
+            await _context.SaveChangesAsync();
+            return Json(new { success = true, mensaje = "Sabor agregado exitosamente." });
+        }
+
+        // Eliminar sabor (AJAX)
+        [HttpPost]
+        public async Task<JsonResult> Eliminar(int id)
+        {
+            var sabor = await _context.Sabor.FindAsync(id);
+            if (sabor == null)
+                return Json(new { success = false, mensaje = "Sabor no encontrado." });
+
+            var enUso = await _context.Productos.AnyAsync(p => p.IdSabor == id && p.Estado == 1);
+            if (enUso)
+                return Json(new { success = false, mensaje = "Este sabor no puede ser eliminado porque hay productos que lo están usando." });
+
+            _context.Sabor.Remove(sabor);
+            await _context.SaveChangesAsync();
+            return Json(new { success = true, mensaje = "Sabor eliminado correctamente." });
         }
     }
 }

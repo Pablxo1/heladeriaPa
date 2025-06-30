@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebHeladeria.Models;
 
@@ -28,16 +26,11 @@ namespace WebHeladeria.Controllers
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
-            var presentacion = await _context.Presentacion
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var presentacion = await _context.Presentacion.FirstOrDefaultAsync(m => m.Id == id);
             if (presentacion == null)
-            {
                 return NotFound();
-            }
 
             return View(presentacion);
         }
@@ -48,15 +41,16 @@ namespace WebHeladeria.Controllers
             return View();
         }
 
-        // POST: Presentaciones/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Presentaciones/Create (Vista normal)
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Descripcion,UsuarioRegistro,FechaRegistro,Estado")] Presentacion presentacion)
+        public async Task<IActionResult> Create([Bind("Descripcion")] Presentacion presentacion)
         {
-            if (ModelState.IsValid)
+            if (!string.IsNullOrWhiteSpace(presentacion.Descripcion))
             {
+                presentacion.UsuarioRegistro = User.Identity?.Name ?? "sistema";
+                presentacion.FechaRegistro = DateTime.Now;
+                presentacion.Estado = 1;
                 _context.Add(presentacion);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -68,29 +62,22 @@ namespace WebHeladeria.Controllers
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
             var presentacion = await _context.Presentacion.FindAsync(id);
             if (presentacion == null)
-            {
                 return NotFound();
-            }
+
             return View(presentacion);
         }
 
         // POST: Presentaciones/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Descripcion,UsuarioRegistro,FechaRegistro,Estado")] Presentacion presentacion)
         {
             if (id != presentacion.Id)
-            {
                 return NotFound();
-            }
 
             if (ModelState.IsValid)
             {
@@ -102,13 +89,9 @@ namespace WebHeladeria.Controllers
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!PresentacionExists(presentacion.Id))
-                    {
                         return NotFound();
-                    }
                     else
-                    {
                         throw;
-                    }
                 }
                 return RedirectToAction(nameof(Index));
             }
@@ -119,16 +102,11 @@ namespace WebHeladeria.Controllers
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
-            {
                 return NotFound();
-            }
 
-            var presentacion = await _context.Presentacion
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var presentacion = await _context.Presentacion.FirstOrDefaultAsync(m => m.Id == id);
             if (presentacion == null)
-            {
                 return NotFound();
-            }
 
             return View(presentacion);
         }
@@ -142,15 +120,67 @@ namespace WebHeladeria.Controllers
             if (presentacion != null)
             {
                 _context.Presentacion.Remove(presentacion);
+                await _context.SaveChangesAsync();
             }
-
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool PresentacionExists(int id)
         {
             return _context.Presentacion.Any(e => e.Id == id);
+        }
+
+        // ------------------- MÉTODOS AJAX PARA MODAL -------------------
+
+        // Listar presentaciones (AJAX)
+        [HttpGet]
+        public async Task<JsonResult> Listar()
+        {
+            var presentaciones = await _context.Presentacion
+                .Where(p => p.Estado == 1)
+                .Select(p => new { p.Id, p.Descripcion })
+                .ToListAsync();
+            return Json(presentaciones);
+        }
+
+        // Crear presentación (AJAX)
+        [HttpPost]
+        public async Task<JsonResult> CreateAjax(string Descripcion)
+        {
+            if (string.IsNullOrWhiteSpace(Descripcion))
+                return Json(new { success = false, mensaje = "La descripción es obligatoria." });
+
+            var existe = await _context.Presentacion.AnyAsync(p => p.Descripcion.ToLower() == Descripcion.ToLower() && p.Estado == 1);
+            if (existe)
+                return Json(new { success = false, mensaje = "Ya existe una presentación con esa descripción." });
+
+            var presentacion = new Presentacion
+            {
+                Descripcion = Descripcion,
+                UsuarioRegistro = User.Identity?.Name ?? "sistema",
+                FechaRegistro = DateTime.Now,
+                Estado = 1
+            };
+            _context.Presentacion.Add(presentacion);
+            await _context.SaveChangesAsync();
+            return Json(new { success = true, mensaje = "Presentación agregada exitosamente." });
+        }
+
+        // Eliminar presentación (AJAX)
+        [HttpPost]
+        public async Task<JsonResult> Eliminar(int id)
+        {
+            var presentacion = await _context.Presentacion.FindAsync(id);
+            if (presentacion == null)
+                return Json(new { success = false, mensaje = "Presentación no encontrada." });
+
+            var enUso = await _context.Productos.AnyAsync(p => p.IdPresentacion == id && p.Estado == 1);
+            if (enUso)
+                return Json(new { success = false, mensaje = "Esta presentación no puede ser eliminada porque hay productos que la están usando." });
+
+            _context.Presentacion.Remove(presentacion);
+            await _context.SaveChangesAsync();
+            return Json(new { success = true, mensaje = "Presentación eliminada correctamente." });
         }
     }
 }

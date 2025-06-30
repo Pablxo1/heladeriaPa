@@ -121,17 +121,20 @@ namespace WebHeladeria.Controllers
             var cliente = await _context.Clientes.FindAsync(id);
             if (cliente != null)
             {
+                // Verifica si el cliente tiene ventas asociadas
+                bool tieneVentas = await _context.Venta.AnyAsync(v => v.IdCliente == id);
+                if (tieneVentas)
+                {
+                    TempData["Error"] = "No se puede eliminar el cliente porque tiene ventas asociadas.";
+                    return RedirectToAction(nameof(Index));
+                }
+
                 _context.Clientes.Remove(cliente);
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ClienteExists(int id)
-        {
-            return _context.Clientes.Any(e => e.Id == id);
-        }
 
-   
     }
 }

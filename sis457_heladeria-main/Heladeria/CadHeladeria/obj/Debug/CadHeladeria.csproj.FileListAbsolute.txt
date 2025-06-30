@@ -34,3 +34,15 @@ C:\Users\Alien\Downloads\sis457_heladeria-main\Heladeria\CadHeladeria\obj\Debug\
 C:\Users\Alien\Downloads\sis457_heladeria-main\Heladeria\CadHeladeria\obj\Debug\CadHelad.5ED86E56.Up2Date
 C:\Users\Alien\Downloads\sis457_heladeria-main\Heladeria\CadHeladeria\obj\Debug\CadHeladeria.dll
 C:\Users\Alien\Downloads\sis457_heladeria-main\Heladeria\CadHeladeria\obj\Debug\CadHeladeria.pdb
+G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\CadHeladeria\bin\Debug\CadHeladeria.dll.config
+G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\CadHeladeria\bin\Debug\CadHeladeria.dll
+G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\CadHeladeria\bin\Debug\CadHeladeria.pdb
+G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\CadHeladeria\bin\Debug\EntityFramework.dll
+G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\CadHeladeria\bin\Debug\EntityFramework.SqlServer.dll
+G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\CadHeladeria\bin\Debug\EntityFramework.xml
+G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\CadHeladeria\bin\Debug\EntityFramework.SqlServer.xml
+G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\CadHeladeria\obj\Debug\CadHeladeria.csproj.AssemblyReference.cache
+G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\CadHeladeria\obj\Debug\CadHeladeria.csproj.CoreCompileInputs.cache
+G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\CadHeladeria\obj\Debug\CadHelad.5ED86E56.Up2Date
+G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\CadHeladeria\obj\Debug\CadHeladeria.dll
+G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\CadHeladeria\obj\Debug\CadHeladeria.pdb

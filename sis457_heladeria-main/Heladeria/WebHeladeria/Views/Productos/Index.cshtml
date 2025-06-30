@@ -5,13 +5,106 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h1 class="mb-4 text-center" style="color:#8B005D;">Productos</h1>
 
-<p>
+<div class="d-flex gap-3 mb-3">
     <a asp-action="Create" class="btn btn-rosa-claro text-white">
         <i class="fa fa-plus"></i> Crear Producto
     </a>
-</p>
+    <button type="button" class="btn btn-rosa-claro text-white" data-toggle="modal" data-target="#modalAgregarSabor" style="margin-left:522px">
+        <i class="fa fa-plus-circle me-1"></i> Administrar Sabores
+    </button>
+    <button type="button" class="btn btn-rosa-claro text-white" data-toggle="modal" data-target="#modalAgregarPresentacion" style="margin-left:15px">
+        <i class="fa fa-plus-circle me-1"></i> Administrar Presentaciones
+    </button>
+</div>
+
+<!-- Modal para administrar Sabores -->
+<div class="modal fade" id="modalAgregarSabor" tabindex="-1" aria-labelledby="modalAgregarSaborLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background: #fff0f5; border-radius: 24px;">
+            <form id="formAgregarSabor" autocomplete="off">
+                <div class="modal-header" style="background: #8B005D;">
+                    <h5 class="modal-title" id="modalAgregarSaborLabel" style="color: #fff;">Administrar Sabores</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="NombreSabor" class="form-label">Nuevo Sabor</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="NombreSabor" name="Nombre" required maxlength="50" placeholder="Nombre del sabor" />
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-plus-circle me-1"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                    <hr />
+                    <h6>Sabores existentes</h6>
+                    <div id="lista-sabores">
+                        <table class="table table-sm table-bordered align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th style="width: 40px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="sabores-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        <i class="fa fa-times-circle me-1"></i> Cerrar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para administrar Presentaciones -->
+<div class="modal fade" id="modalAgregarPresentacion" tabindex="-1" aria-labelledby="modalAgregarPresentacionLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background: #fff0f5; border-radius: 24px;">
+            <form id="formAgregarPresentacion" autocomplete="off">
+                <div class="modal-header" style="background: #8B005D;">
+                    <h5 class="modal-title" id="modalAgregarPresentacionLabel" style="color: #fff;">Administrar Presentaciones</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="DescripcionPresentacion" class="form-label">Nueva Presentación</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="DescripcionPresentacion" name="Descripcion" required maxlength="50" placeholder="Descripción de la presentación" />
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa fa-plus-circle me-1"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                    <hr />
+                    <h6>Presentaciones existentes</h6>
+                    <div id="lista-presentaciones">
+                        <table class="table table-sm table-bordered align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Descripción</th>
+                                    <th style="width: 40px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="presentaciones-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        <i class="fa fa-times-circle me-1"></i> Cerrar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 <table class="table" style="background-color: #fff0f5; color: #8B005D;">
     <thead style="background-color: #f497b6; color: white;">
@@ -56,7 +149,6 @@
         }
     </tbody>
 </table>
-
 <style>
     .btn-rosa-claro {
         background-color: #f497b6;
@@ -69,3 +161,124 @@
             color: white;
         }
 </style>
+
+@if (TempData["Error"] != null)
+{
+    <script>
+        alert('@TempData["Error"]');
+    </script>
+}
+
+@section Scripts {
+    <script>
+        // --- SABORES ---
+        $('#modalAgregarSabor').on('show.bs.modal', function () {
+            cargarSabores();
+        });
+
+        function cargarSabores() {
+            $.get('@Url.Action("Listar", "Sabores")', function (data) {
+                var tbody = $('#sabores-body');
+                tbody.empty();
+                if (data.length === 0) {
+                    tbody.append('<tr><td colspan="2" class="text-center text-muted">No hay sabores registrados.</td></tr>');
+                } else {
+                    data.forEach(function (sabor) {
+                        tbody.append(
+                            `<tr>
+                                <td>${sabor.nombre ?? sabor.Nombre}</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-sm btn-danger btn-eliminar-sabor" data-id="${sabor.id ?? sabor.Id}" title="Eliminar">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>`
+                        );
+                    });
+                }
+            });
+        }
+
+        // Eliminar sabor
+        $(document).on('click', '.btn-eliminar-sabor', function () {
+            var id = $(this).data('id');
+            if (confirm('¿Está seguro de eliminar este sabor?')) {
+                $.post('@Url.Action("Eliminar", "Sabores")', { id: id }, function (result) {
+                    if (result.success) {
+                        cargarSabores();
+                    }
+                    alert(result.mensaje);
+                });
+            }
+        });
+
+        // Agregar sabor
+        $('#formAgregarSabor').submit(function (e) {
+            e.preventDefault();
+            var nombre = $('#NombreSabor').val();
+            if (!nombre.trim()) return;
+            $.post('@Url.Action("CreateAjax", "Sabores")', { Nombre: nombre }, function (result) {
+                if (result.success) {
+                    $('#NombreSabor').val('');
+                    cargarSabores();
+                }
+                alert(result.mensaje);
+            });
+        });
+
+        // --- PRESENTACIONES ---
+        $('#modalAgregarPresentacion').on('show.bs.modal', function () {
+            cargarPresentaciones();
+        });
+
+        function cargarPresentaciones() {
+            $.get('@Url.Action("Listar", "Presentaciones")', function (data) {
+                var tbody = $('#presentaciones-body');
+                tbody.empty();
+                if (data.length === 0) {
+                    tbody.append('<tr><td colspan="2" class="text-center text-muted">No hay presentaciones registradas.</td></tr>');
+                } else {
+                    data.forEach(function (p) {
+                        tbody.append(
+                            `<tr>
+                                <td>${p.descripcion ?? p.Descripcion}</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-sm btn-danger btn-eliminar-presentacion" data-id="${p.id ?? p.Id}" title="Eliminar">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>`
+                        );
+                    });
+                }
+            });
+        }
+
+        // Eliminar presentación
+        $(document).on('click', '.btn-eliminar-presentacion', function () {
+            var id = $(this).data('id');
+            if (confirm('¿Está seguro de eliminar esta presentación?')) {
+                $.post('@Url.Action("Eliminar", "Presentaciones")', { id: id }, function (result) {
+                    if (result.success) {
+                        cargarPresentaciones();
+                    }
+                    alert(result.mensaje);
+                });
+            }
+        });
+
+        // Agregar presentación
+        $('#formAgregarPresentacion').submit(function (e) {
+            e.preventDefault();
+            var descripcion = $('#DescripcionPresentacion').val();
+            if (!descripcion.trim()) return;
+            $.post('@Url.Action("CreateAjax", "Presentaciones")', { Descripcion: descripcion }, function (result) {
+                if (result.success) {
+                    $('#DescripcionPresentacion').val('');
+                    cargarPresentaciones();
+                }
+                alert(result.mensaje);
+            });
+        });
+    </script>
+}

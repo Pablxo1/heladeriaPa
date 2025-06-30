@@ -12,7 +12,6 @@ namespace WebHeladeria.Controllers
     [Authorize]
     public class ProductosController : Controller
     {
-        
         private readonly FinalHeladeriaContext _context;
 
         public ProductosController(FinalHeladeriaContext context)
@@ -98,7 +97,6 @@ namespace WebHeladeria.Controllers
             return View(producto);
         }
 
-
         // POST: Productos/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -113,7 +111,7 @@ namespace WebHeladeria.Controllers
             {
                 try
                 {
-                    producto.UsuarioRegistro = User.Identity.Name;
+                    producto.UsuarioRegistro = User.Identity?.Name ?? string.Empty;
                     _context.Update(producto);
                     await _context.SaveChangesAsync();
                     TempData["Mensaje"] = "Producto editado exitosamente.";
@@ -164,6 +162,13 @@ namespace WebHeladeria.Controllers
             var producto = await _context.Productos.FindAsync(id);
             if (producto != null)
             {
+                bool tieneVentas = await _context.VentaDetalles.AnyAsync(vd => vd.IdProducto == id);
+                if (tieneVentas)
+                {
+                    TempData["Error"] = "No se puede eliminar el producto porque tiene ventas asociadas.";
+                    return RedirectToAction(nameof(Index));
+                }
+
                 _context.Productos.Remove(producto);
                 await _context.SaveChangesAsync();
             }
