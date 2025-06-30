@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1IQfkIB90Y4=",
+  "dgSpecHash": "hJk1/NxuOc8=",
   "success": true,
-  "projectFilePath": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\WebHeladeria.csproj",
+  "projectFilePath": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\WebHeladeria.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alien\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Alien\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

@@ -17,189 +17,189 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebHeladeria
 build_property.RootNamespace = WebHeladeria
-build_property.ProjectDir = G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\WebHeladeria\
+build_property.ProjectDir = G:\PROGRAMACION\hela\sis457_heladeria-mainwerwer\Heladeria\WebHeladeria\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = G:\PROGRAMACION\hela\sis457_heladeria-main\Heladeria\WebHeladeria
+build_property.MSBuildProjectDirectory = G:\PROGRAMACION\hela\sis457_heladeria-mainwerwer\Heladeria\WebHeladeria
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Account/Login.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Clientes/Create.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Clientes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Clientes/Delete.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Clientes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Clientes/Details.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Clientes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Clientes/Edit.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Clientes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Clientes/Index.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Clientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Home/Index.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Home/Privacy.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Presentaciones/Create.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Presentaciones/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGFjaW9uZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Presentaciones/Delete.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Presentaciones/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGFjaW9uZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Presentaciones/Details.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Presentaciones/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGFjaW9uZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Presentaciones/Edit.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Presentaciones/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGFjaW9uZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Presentaciones/Index.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Presentaciones/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc2VudGFjaW9uZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Productos/Create.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Productos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Productos/Delete.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Productos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Productos/Details.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Productos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Productos/Edit.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Productos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Productos/Index.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Productos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Proveedores/Create.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Proveedores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Proveedores/Delete.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Proveedores/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Proveedores/Details.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Proveedores/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Proveedores/Edit.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Proveedores/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Proveedores/Index.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Proveedores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Sabores/Create.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Sabores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Fib3Jlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Sabores/Delete.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Sabores/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Fib3Jlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Sabores/Details.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Sabores/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Fib3Jlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Sabores/Edit.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Sabores/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Fib3Jlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Sabores/Index.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Sabores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2Fib3Jlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Shared/Error.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Shared/_LogoutPartial.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Shared/_LogoutPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dvdXRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Shared/_ValidationScriptsPartial.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/VentaDetalles/Create.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/VentaDetalles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFEZXRhbGxlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/VentaDetalles/Delete.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/VentaDetalles/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFEZXRhbGxlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/VentaDetalles/Details.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/VentaDetalles/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFEZXRhbGxlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/VentaDetalles/Edit.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/VentaDetalles/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFEZXRhbGxlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/VentaDetalles/Index.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/VentaDetalles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFEZXRhbGxlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Ventas/Create.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Ventas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Ventas/Delete.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Ventas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Ventas/Details.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Ventas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Ventas/Edit.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Ventas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Ventas/Index.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Ventas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/_ViewImports.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/_ViewStart.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/PROGRAMACION/hela/sis457_heladeria-main/Heladeria/WebHeladeria/Views/Shared/_Layout.cshtml]
+[G:/PROGRAMACION/hela/sis457_heladeria-mainwerwer/Heladeria/WebHeladeria/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-8fp07siwvi

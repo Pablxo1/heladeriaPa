@@ -1,29 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\",
+  "WorkspaceRootPath": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-main\\heladeria\\webheladeria\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|solutionrelative:webheladeria\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-mainwerwer\\heladeria\\webheladeria\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|solutionrelative:webheladeria\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-main\\heladeria\\webheladeria\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-mainwerwer\\heladeria\\webheladeria\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|solutionrelative:webheladeria\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-mainwerwer\\heladeria\\webheladeria\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|solutionrelative:webheladeria\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-main\\heladeria\\webheladeria\\controllers\\presentacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-mainwerwer\\heladeria\\webheladeria\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|solutionrelative:webheladeria\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-mainwerwer\\heladeria\\webheladeria\\controllers\\presentacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|solutionrelative:webheladeria\\controllers\\presentacionescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-main\\heladeria\\webheladeria\\controllers\\saborescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-mainwerwer\\heladeria\\webheladeria\\controllers\\saborescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|solutionrelative:webheladeria\\controllers\\saborescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-main\\heladeria\\webheladeria\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-mainwerwer\\heladeria\\webheladeria\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|solutionrelative:webheladeria\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-main\\heladeria\\webheladeria\\views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|g:\\programacion\\hela\\sis457_heladeria-mainwerwer\\heladeria\\webheladeria\\views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|solutionrelative:webheladeria\\views\\productos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -34,85 +42,105 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductosController.cs",
-              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\Controllers\\ProductosController.cs",
-              "RelativeDocumentMoniker": "WebHeladeria\\Controllers\\ProductosController.cs",
-              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\Controllers\\ProductosController.cs",
-              "RelativeToolTip": "WebHeladeria\\Controllers\\ProductosController.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAQwHkAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T20:48:26.588Z",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Views\\Clientes\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebHeladeria\\Views\\Clientes\\Index.cshtml",
+              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Views\\Clientes\\Index.cshtml",
+              "RelativeToolTip": "WebHeladeria\\Views\\Clientes\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T21:05:25.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PresentacionesController.cs",
-              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\Controllers\\PresentacionesController.cs",
-              "RelativeDocumentMoniker": "WebHeladeria\\Controllers\\PresentacionesController.cs",
-              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\Controllers\\PresentacionesController.cs",
-              "RelativeToolTip": "WebHeladeria\\Controllers\\PresentacionesController.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAiwLgAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "WebHeladeria\\Controllers\\ClientesController.cs",
+              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "WebHeladeria\\Controllers\\ClientesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T20:19:51.549Z",
+              "WhenOpened": "2025-06-30T21:03:49.292Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SaboresController.cs",
-              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\Controllers\\SaboresController.cs",
-              "RelativeDocumentMoniker": "WebHeladeria\\Controllers\\SaboresController.cs",
-              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\Controllers\\SaboresController.cs",
-              "RelativeToolTip": "WebHeladeria\\Controllers\\SaboresController.cs",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAAmwKcAAAAAAAAAAAAAAA==",
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "WebHeladeria\\Controllers\\ProductosController.cs",
+              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Controllers\\ProductosController.cs",
+              "RelativeToolTip": "WebHeladeria\\Controllers\\ProductosController.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAgwJ0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T20:13:09.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\Views\\Productos\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebHeladeria\\Views\\Productos\\Create.cshtml",
-              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\Views\\Productos\\Create.cshtml",
-              "RelativeToolTip": "WebHeladeria\\Views\\Productos\\Create.cshtml",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAuwEMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-30T20:10:24.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T20:48:26.588Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "style.css",
-              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\wwwroot\\css\\style.css",
-              "RelativeDocumentMoniker": "WebHeladeria\\wwwroot\\css\\style.css",
-              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\wwwroot\\css\\style.css",
-              "RelativeToolTip": "WebHeladeria\\wwwroot\\css\\style.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-30T19:59:10.474Z",
-              "EditorCaption": ""
+              "Title": "PresentacionesController.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Controllers\\PresentacionesController.cs",
+              "RelativeDocumentMoniker": "WebHeladeria\\Controllers\\PresentacionesController.cs",
+              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Controllers\\PresentacionesController.cs",
+              "RelativeToolTip": "WebHeladeria\\Controllers\\PresentacionesController.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAiwLgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T20:19:51.549Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\Views\\Productos\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebHeladeria\\Views\\Productos\\Index.cshtml",
-              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\Views\\Productos\\Index.cshtml",
-              "RelativeToolTip": "WebHeladeria\\Views\\Productos\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAACLAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "SaboresController.cs",
+              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Controllers\\SaboresController.cs",
+              "RelativeDocumentMoniker": "WebHeladeria\\Controllers\\SaboresController.cs",
+              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Controllers\\SaboresController.cs",
+              "RelativeToolTip": "WebHeladeria\\Controllers\\SaboresController.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAmwKcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T20:13:09.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Views\\Productos\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebHeladeria\\Views\\Productos\\Create.cshtml",
+              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Views\\Productos\\Create.cshtml",
+              "RelativeToolTip": "WebHeladeria\\Views\\Productos\\Create.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAuwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-30T19:54:56.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T20:10:24.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "style.css",
+              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\wwwroot\\css\\style.css",
+              "RelativeDocumentMoniker": "WebHeladeria\\wwwroot\\css\\style.css",
+              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\wwwroot\\css\\style.css",
+              "RelativeToolTip": "WebHeladeria\\wwwroot\\css\\style.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-30T19:59:10.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Views\\Productos\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebHeladeria\\Views\\Productos\\Index.cshtml",
+              "ToolTip": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\Views\\Productos\\Index.cshtml",
+              "RelativeToolTip": "WebHeladeria\\Views\\Productos\\Index.cshtml",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAewKQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T19:54:56.015Z"
             }
           ]
         }

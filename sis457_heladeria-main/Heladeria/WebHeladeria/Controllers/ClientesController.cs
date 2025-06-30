@@ -46,7 +46,7 @@ namespace WebHeladeria.Controllers
                 if (!string.IsNullOrWhiteSpace(cliente.Nit)
                     && !string.IsNullOrWhiteSpace(cliente.Nombre))
                 {
-                    cliente.UsuarioRegistro = User.Identity.Name;
+                    cliente.UsuarioRegistro = User?.Identity?.Name ?? "Sistema";
                     cliente.FechaRegistro = DateTime.Now;
                     cliente.Estado = 1;
                     _context.Add(cliente);
@@ -83,7 +83,7 @@ namespace WebHeladeria.Controllers
             {
                 try
                 {
-                    cliente.UsuarioRegistro = User.Identity.Name;
+                    cliente.UsuarioRegistro = User?.Identity?.Name ?? "Sistema";
                     _context.Update(cliente);
                     await _context.SaveChangesAsync();
                 }
@@ -135,6 +135,9 @@ namespace WebHeladeria.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
+        private bool ClienteExists(int id)
+        {
+            return _context.Clientes.Any(e => e.Id == id);
+        }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\WebHeladeria.csproj": {}
+    "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\WebHeladeria.csproj": {}
   },
   "projects": {
-    "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\WebHeladeria.csproj": {
+    "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\WebHeladeria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\WebHeladeria.csproj",
+        "projectUniqueName": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\WebHeladeria.csproj",
         "projectName": "WebHeladeria",
-        "projectPath": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\WebHeladeria.csproj",
+        "projectPath": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\WebHeladeria.csproj",
         "packagesPath": "C:\\Users\\Alien\\.nuget\\packages\\",
-        "outputPath": "G:\\PROGRAMACION\\hela\\sis457_heladeria-main\\Heladeria\\WebHeladeria\\obj\\",
+        "outputPath": "G:\\PROGRAMACION\\hela\\sis457_heladeria-mainwerwer\\Heladeria\\WebHeladeria\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
