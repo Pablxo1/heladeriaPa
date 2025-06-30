@@ -1,0 +1,156 @@
+﻿@model WebHeladeria.Models.Ventum
+
+@{
+    ViewData["Title"] = "Detalle de Venta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var detalles = ViewBag.Detalles as List<WebHeladeria.Models.VentaDetalle>;
+}
+
+<div class="container d-flex justify-content-center mt-5 mb-5">
+    <div class="card shadow p-4 rounded w-100" style="max-width: 950px; background-color: #fff0f5;">
+        <h2 class="mb-4 text-center" style="color:#8B005D; font-weight:700; letter-spacing:1px;">
+            <i class="fa fa-receipt me-2"></i>Detalle de Venta
+        </h2>
+
+        <div class="row mb-3">
+            <div class="col-md-4 mb-3">
+                <div class="info-box">
+                    <span class="info-title"><i class="fa fa-user me-1"></i> Cliente</span>
+                    <div class="info-value">@Model.IdClienteNavigation?.Nombre (@Model.IdClienteNavigation?.Nit)</div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="info-box">
+                    <span class="info-title"><i class="fa fa-credit-card me-1"></i> Tipo de Pago</span>
+                    <div class="info-value">@Model.IdTipoPagoNavigation?.Descripcion</div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="info-box">
+                    <span class="info-title"><i class="fa fa-user-circle me-1"></i> Usuario</span>
+                    <div class="info-value">@Model.UsuarioRegistro</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4 mb-3">
+                <div class="info-box">
+                    <span class="info-title"><i class="fa fa-calendar me-1"></i> Fecha</span>
+                    <div class="info-value">@Model.FechaRegistro.ToString("dd/MM/yyyy HH:mm")</div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="info-box">
+                    <span class="info-title"><i class="fa fa-hashtag me-1"></i> Nro. de Venta</span>
+                    <div class="info-value">@Model.Id</div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <h5 class="mb-3" style="color:#8B005D; font-weight:600;">
+            <i class="fa fa-ice-cream me-2"></i>Productos de la Venta
+        </h5>
+        <div class="table-responsive mb-3">
+            <table class="table table-bordered align-middle" style="background-color: #fff;">
+                <thead style="background-color: #f497b6; color: white;">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (detalles != null && detalles.Count > 0)
+                    {
+                        foreach (var d in detalles)
+                        {
+                            <tr>
+                                <td>@d.IdProductoNavigation?.Nombre</td>
+                                <td>@d.Cantidad</td>
+                                <td>@d.PrecioUnitario.ToString("0.00")</td>
+                                <td>@d.Total.ToString("0.00")</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center text-muted">No hay productos registrados en esta venta.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4 offset-md-8">
+                <div class="input-group">
+                    <span class="input-group-text fw-bold" style="background-color: #f497b6; color: white;">
+                        <i class="fa fa-calculator me-1"></i>Total
+                    </span>
+                    <input type="text" class="form-control fw-bold custom-input" value="@Model.MontoTotal.ToString("0.00")" readonly />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="text-end mt-4">
+            <a asp-action="Index" class="btn btn-outline-dark me-2 fw-bold">
+                <i class="fa fa-arrow-left"></i> Volver a Lista
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .info-box {
+        background: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 4px rgba(244,151,182,0.08);
+        padding: 1rem 1.2rem;
+        margin-bottom: 0.5rem;
+        border-left: 4px solid #f497b6;
+    }
+
+    .info-title {
+        color: #8B005D;
+        font-weight: 600;
+        font-size: 1.05rem;
+        margin-bottom: 0.2rem;
+        display: block;
+    }
+
+    .info-value {
+        color: #333;
+        font-size: 1.08rem;
+        font-weight: 500;
+    }
+
+    .custom-input {
+        font-size: 1.05rem;
+        color: #8B005D;
+        font-weight: 500;
+        background-color: #fff;
+    }
+
+    .form-label {
+        font-size: 1.08rem;
+        letter-spacing: 0.5px;
+    }
+
+    .table thead th {
+        vertical-align: middle;
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.05rem;
+        letter-spacing: 0.5px;
+    }
+
+    .table td, .table th {
+        vertical-align: middle;
+    }
+</style>

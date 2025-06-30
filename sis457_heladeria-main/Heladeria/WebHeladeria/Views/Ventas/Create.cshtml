@@ -1,0 +1,339 @@
+﻿@model WebHeladeria.Models.Ventum
+
+@{
+    ViewData["Title"] = "Registrar Venta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container d-flex justify-content-center mt-5 mb-5">
+    <div class="card shadow p-4 rounded w-100" style="max-width: 950px; background-color: #fff0f5;">
+        <h2 class="mb-4 text-center" style="color:#8B005D; font-weight:700; letter-spacing:1px;">
+            <i class="fa fa-shopping-cart me-2"></i>Registrar Nueva Venta
+        </h2>
+
+        <form id="formVenta" asp-action="Create" method="post" autocomplete="off">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label fw-semibold" style="color:#8B005D;">
+                        <i class="fa fa-user me-1"></i>Cliente
+                    </label>
+                    <div class="input-group custom-select-group">
+                        <span class="input-group-text bg-white border-end-0" style="color:#f497b6;">
+                            <i class="fa fa-users"></i>
+                        </span>
+                        <select id="IdCliente" name="IdCliente" class="form-select border-start-0 custom-select" required>
+                            <option value="">Seleccione un cliente</option>
+                            @foreach (var cliente in (IEnumerable<WebHeladeria.Models.Cliente>)ViewBag.Clientes)
+                            {
+                                <option value="@cliente.Id">@cliente.Nombre (@cliente.Nit)</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label fw-semibold" style="color:#8B005D;">
+                        <i class="fa fa-credit-card me-1"></i>Tipo de Pago
+                    </label>
+                    <div class="input-group custom-select-group">
+                        <span class="input-group-text bg-white border-end-0" style="color:#f497b6;">
+                            <i class="fa fa-credit-card"></i>
+                        </span>
+                        <select id="IdTipoPago" name="IdTipoPago" class="form-select border-start-0 custom-select" required>
+                            <option value="">Seleccione tipo de pago</option>
+                            @foreach (var tipo in (IEnumerable<WebHeladeria.Models.TipoPago>)ViewBag.TipoPagos)
+                            {
+                                <option value="@tipo.Id">@tipo.Descripcion</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4" />
+
+            <h5 class="mb-3" style="color:#8B005D; font-weight:600;">
+                <i class="fa fa-plus-circle me-2"></i>Agregar Productos
+            </h5>
+            <div class="row align-items-end mb-3">
+                <div class="col-md-5 mb-2">
+                    <label class="form-label fw-semibold" style="color:#8B005D;">
+                        <i class="fa fa-ice-cream me-1"></i>Producto
+                    </label>
+                    <div class="input-group custom-select-group">
+                        <span class="input-group-text bg-white border-end-0" style="color:#f497b6;">
+                            <i class="fa fa-cube"></i>
+                        </span>
+                        <select id="producto" class="form-select border-start-0 custom-select">
+                            <option value="">Seleccione un producto</option>
+                            @foreach (var prod in (IEnumerable<WebHeladeria.Models.Producto>)ViewBag.Productos)
+                            {
+                                <option value="@prod.Id" data-precio="@prod.Precio.ToString(System.Globalization.CultureInfo.InvariantCulture)">
+                                    @prod.Nombre - @prod.Precio.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture)
+                                </option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-2">
+                    <label class="form-label fw-semibold" style="color:#8B005D;">Cantidad</label>
+                    <input type="number" id="cantidad" min="1" value="1" class="form-control custom-input" />
+                </div>
+                <div class="col-md-2 mb-2">
+                    <label class="form-label fw-semibold" style="color:#8B005D;">Precio</label>
+                    <input type="number" id="precio" min="0" step="0.01" class="form-control custom-input" readonly />
+                </div>
+                <div class="col-md-3 mb-2">
+                    <button type="button" id="btnAgregarDetalle" class="btn btn-rosa-claro w-100 text-white fw-bold shadow-sm">
+                        <i class="fa fa-plus"></i> Agregar
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-responsive mb-3">
+                <table id="tablaDetalle" class="table table-bordered align-middle" style="background-color: #fff;">
+                    <thead style="background-color: #f497b6; color: white;">
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Total</th>
+                            <th class="text-center">Quitar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- detalles -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 offset-md-8">
+                    <div class="input-group">
+                        <span class="input-group-text fw-bold" style="background-color: #f497b6; color: white;">
+                            <i class="fa fa-calculator me-1"></i>Total
+                        </span>
+                        <input type="number" id="total" name="MontoTotal" min="0" step="0.01" class="form-control fw-bold custom-input" readonly />
+                    </div>
+                </div>
+            </div>
+
+            <div id="pago-efectivo-campos" class="row mb-3">
+                <div class="col-md-4 offset-md-4">
+                    <label class="form-label fw-semibold" style="color:#8B005D;">Monto Pago</label>
+                    <input type="number" id="efectivo" name="MontoPago" min="0" step="0.01" class="form-control custom-input" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold" style="color:#8B005D;">Cambio</label>
+                    <input type="number" id="cambio" name="MontoCambio" min="0" step="0.01" class="form-control custom-input" readonly />
+                </div>
+            </div>
+
+            <input type="hidden" id="detalleJson" name="DetalleJson" />
+
+            <div class="text-end mt-4">
+                <a asp-action="Index" class="btn btn-outline-dark me-2 fw-bold">
+                    <i class="fa fa-arrow-left"></i> Volver a Lista
+                </a>
+                <button type="submit" class="btn btn-rosa-claro text-white fw-bold shadow-sm">
+                    <i class="fa fa-save"></i> Guardar Venta
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let detalles = [];
+
+        // IDs de tipo de pago que NO requieren efectivo ni cambio (ajusta según tus datos)
+        const tiposSinEfectivo = [2, 3]; // 2 = Tarjeta, 3 = QR
+
+        function toggleCamposPago() {
+            const tipoPago = Number($('#IdTipoPago').val());
+            if (tiposSinEfectivo.includes(tipoPago)) {
+                $('#pago-efectivo-campos').hide();
+                $('#efectivo').val('');
+                $('#cambio').val('');
+            } else {
+                $('#pago-efectivo-campos').show();
+            }
+        }
+
+        $('#IdTipoPago').on('change', toggleCamposPago);
+        $(document).ready(toggleCamposPago);
+
+        // Actualiza el precio al seleccionar producto
+        $('#producto').on('change', function () {
+            const precio = Number($('option:selected', this).data('precio')) || 0;
+            $('#precio').val(precio > 0 ? precio : '');
+        });
+
+        // Agregar producto al detalle
+        $('#btnAgregarDetalle').on('click', function (e) {
+            e.preventDefault();
+            const idProducto = $('#producto').val();
+            const nombreProducto = $('#producto option:selected').text();
+            const precio = Number($('#precio').val());
+            const cantidad = Number($('#cantidad').val());
+            if (!idProducto || isNaN(precio) || isNaN(cantidad) || cantidad < 1 || precio <= 0) {
+                alert('Seleccione un producto y cantidad válida.');
+                return;
+            }
+            const existente = detalles.find(d => d.idProducto == Number(idProducto));
+            if (existente) {
+                existente.cantidad += cantidad;
+            } else {
+                detalles.push({
+                    idProducto: Number(idProducto),
+                    nombreProducto: nombreProducto,
+                    cantidad: cantidad,
+                    precioUnitario: precio
+                });
+            }
+            renderDetalle();
+            limpiarProducto();
+        });
+
+        // Quitar producto del detalle
+        $('#tablaDetalle').on('click', '.btn-quitar', function () {
+            const idProducto = Number($(this).data('id'));
+            detalles = detalles.filter(d => d.idProducto !== idProducto);
+            renderDetalle();
+        });
+
+        // Calcular cambio al ingresar efectivo
+        $('#efectivo').on('input', function () {
+            calcularCambio();
+        });
+
+        // Renderiza la tabla de detalles y recalcula el total
+        function renderDetalle() {
+            let html = '';
+            let total = 0;
+            detalles.forEach(d => {
+                const subtotal = Number(d.cantidad) * Number(d.precioUnitario);
+                html += `<tr>
+                    <td>${d.nombreProducto}</td>
+                    <td>${d.cantidad}</td>
+                    <td>${d.precioUnitario.toFixed(2)}</td>
+                    <td>${subtotal.toFixed(2)}</td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-quitar btn-icon" data-id="${d.idProducto}" title="Quitar">
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>`;
+                total += subtotal;
+            });
+            $('#tablaDetalle tbody').html(html);
+            $('#total').val(total.toFixed(2));
+            $('#detalleJson').val(JSON.stringify(detalles));
+            calcularCambio();
+        }
+
+        // Calcula el cambio
+        function calcularCambio() {
+            const total = Number($('#total').val()) || 0;
+            const efectivo = Number($('#efectivo').val()) || 0;
+            const cambio = efectivo - total;
+            $('#cambio').val(cambio >= 0 ? cambio.toFixed(2) : '0.00');
+        }
+
+        // Limpia los campos de producto
+        function limpiarProducto() {
+            $('#producto').val('');
+            $('#precio').val('');
+            $('#cantidad').val(1);
+        }
+
+        // Validación antes de enviar
+        $('#formVenta').on('submit', function () {
+            if (detalles.length === 0) {
+                alert('Debe agregar al menos un producto a la venta.');
+                return false;
+            }
+            // Si el tipo de pago es efectivo, validar monto pago
+            const tipoPago = Number($('#IdTipoPago').val());
+            if (!tiposSinEfectivo.includes(tipoPago)) {
+                if ($('#efectivo').val() === '' || Number($('#efectivo').val()) < Number($('#total').val())) {
+                    alert('El efectivo no puede ser menor al total.');
+                    return false;
+                }
+            }
+            $('#detalleJson').val(JSON.stringify(detalles));
+            return true;
+        });
+    </script>
+    <style>
+        .btn-rosa-claro {
+            background-color: #f497b6;
+            border-color: #f497b6;
+        }
+
+            .btn-rosa-claro:hover, .btn-rosa-claro:focus {
+                background-color: #e06a8a;
+                border-color: #e06a8a;
+                color: white;
+            }
+
+        .custom-select-group .input-group-text {
+            border-radius: 0.375rem 0 0 0.375rem;
+            font-size: 1.1rem;
+        }
+
+        .custom-select {
+            border-radius: 0 0.375rem 0.375rem 0;
+            font-size: 1.05rem;
+            color: #8B005D;
+            font-weight: 500;
+            background-color: #fff;
+            border-left: 0;
+        }
+
+        .custom-input {
+            font-size: 1.05rem;
+            color: #8B005D;
+            font-weight: 500;
+            background-color: #fff;
+        }
+
+        .form-label {
+            font-size: 1.08rem;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-icon {
+            background: #fff0f5;
+            color: #f497b6;
+            border: 1.5px solid #f497b6;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s, color 0.2s, border 0.2s;
+            font-size: 1.1rem;
+            box-shadow: 0 1px 3px rgba(244,151,182,0.08);
+        }
+
+            .btn-icon:hover, .btn-icon:focus {
+                background: #f497b6;
+                color: #fff;
+                border-color: #e06a8a;
+            }
+
+        .table thead th {
+            vertical-align: middle;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+        }
+
+        .table td, .table th {
+            vertical-align: middle;
+        }
+    </style>
+}

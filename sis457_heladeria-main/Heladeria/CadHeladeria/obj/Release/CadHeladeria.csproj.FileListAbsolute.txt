@@ -1,0 +1,12 @@
+D:\SIS457\sis457_heladeria\Heladeria\CadHeladeria\bin\Release\CadHeladeria.dll.config
+D:\SIS457\sis457_heladeria\Heladeria\CadHeladeria\bin\Release\CadHeladeria.dll
+D:\SIS457\sis457_heladeria\Heladeria\CadHeladeria\bin\Release\CadHeladeria.pdb
+D:\SIS457\sis457_heladeria\Heladeria\CadHeladeria\bin\Release\EntityFramework.dll
+D:\SIS457\sis457_heladeria\Heladeria\CadHeladeria\bin\Release\EntityFramework.SqlServer.dll
+D:\SIS457\sis457_heladeria\Heladeria\CadHeladeria\bin\Release\EntityFramework.xml
+D:\SIS457\sis457_heladeria\Heladeria\CadHeladeria\bin\Release\EntityFramework.SqlServer.xml
+D:\SIS457\sis457_heladeria\Heladeria\CadHeladeria\obj\Release\CadHeladeria.csproj.AssemblyReference.cache
+D:\SIS457\sis457_heladeria\Heladeria\CadHeladeria\obj\Release\CadHeladeria.csproj.CoreCompileInputs.cache
+D:\SIS457\sis457_heladeria\Heladeria\CadHeladeria\obj\Release\CadHelad.5ED86E56.Up2Date
+D:\SIS457\sis457_heladeria\Heladeria\CadHeladeria\obj\Release\CadHeladeria.dll
+D:\SIS457\sis457_heladeria\Heladeria\CadHeladeria\obj\Release\CadHeladeria.pdb
